@@ -63,6 +63,7 @@
         <span class="nav-card-arrow">→</span>
       </div>
     </div>
+    
   </div>
   <footer>
     Portfolio de <strong>Yassine AMOR</strong> · BTS SIO SISR · Lycée La Martinière Duchère · 2025–2027
@@ -145,13 +146,13 @@
           <span class="ap-num">AP 03</span>
           <span class="ap-year">2025 — Année 1</span>
         </div>
-        <h4>Déploiement d'un serveur Linux</h4>
-        <p>Installation d'un serveur Debian, configuration SSH, gestion des utilisateurs, droits et services (Apache, MariaDB).</p>
+        <h4>Web Design</h4>
+        <p>Refonte complète du site web du Lycée La Martinière Duchère en HTML/CSS : structure sémantique, mise en page CSS, navigation multi-pages et intégration de contenu.</p>
         <div class="ap-tags">
-          <span class="ap-tag">Debian</span>
-          <span class="ap-tag">SSH</span>
-          <span class="ap-tag">Apache</span>
-          <span class="ap-tag">MariaDB</span>
+          <span class="ap-tag">HTML5</span>
+          <span class="ap-tag">CSS3</span>
+          <span class="ap-tag">Web Design</span>
+          <span class="ap-tag">Maquettage</span>
         </div>
         <span class="ap-card-open-hint">→ Voir le détail</span>
       </div>
@@ -513,24 +514,25 @@
     },
     ap03: {
       num: 'AP 03',
-      title: 'Déploiement d\'un serveur Linux',
+      title: 'Web Design — Site du Lycée La Martinière Duchère',
       year: '2025 — Année 1',
-      intro: 'Installation et configuration complète d\'un serveur Debian en environnement de production simulé. Ce TP couvre la sécurisation de l\'accès SSH, la gestion fine des utilisateurs et des droits, ainsi que le déploiement des services web Apache et de base de données MariaDB.',
-      tags: ['Debian', 'SSH', 'Apache', 'MariaDB'],
+      intro: 'Ce TP de Web Design consistait à recréer le site web du Lycée La Martinière Duchère en HTML/CSS. L\'objectif était de concevoir une structure multi-pages cohérente avec une mise en page CSS (float, inline-block), une navigation entre pages, et l\'intégration de contenus textuels et médias. Ce travail démontre des compétences concrètes en développement web front-end.',
+      tags: ['HTML5', 'CSS3', 'Web Design', 'Maquettage', 'Multi-pages'],
       steps: [
-        { title: 'Installation de Debian', desc: 'Installation minimale de Debian (sans environnement graphique), choix des partitions (swap, /, /home), configuration du fuseau horaire et du réseau.' },
-        { title: 'Sécurisation SSH', desc: 'Modification du port SSH par défaut, désactivation de la connexion root directe, mise en place de l\'authentification par clé publique/privée.' },
-        { title: 'Gestion des utilisateurs et droits', desc: 'Création de comptes utilisateurs, attribution des groupes, configuration des droits via chmod/chown et gestion des accès sudo.' },
-        { title: 'Déploiement Apache', desc: 'Installation d\'Apache2, création d\'un VirtualHost, activation des modules nécessaires (rewrite, ssl). Test d\'affichage d\'une page web personnalisée.' },
-        { title: 'Configuration MariaDB', desc: 'Installation de MariaDB, sécurisation initiale (mysql_secure_installation), création d\'une base de données et d\'un utilisateur dédié avec les droits appropriés.' },
+        { title: 'Analyse de la maquette', desc: 'Étude de la structure du site original du lycée : identification des zones (header, nav, section, article, aside, footer), des éléments visuels (bannière, images, fond) et de la charte graphique.' },
+        { title: 'Création de la structure HTML', desc: 'Rédaction des fichiers HTML sémantiques pour chaque page : Accueil (index.html), Contact, BTS SIO et Équipe. Utilisation des balises HTML5 structurelles (header, nav, section, article, aside, footer).' },
+        { title: 'Mise en page CSS', desc: 'Création du fichier web.css commun à toutes les pages : positionnement de la navigation en flottant (float:left), mise en page côte à côte de l\'article et de l\'aside (inline-block), gestion des marges et des largeurs.' },
+        { title: 'Intégration des médias', desc: 'Intégration de la bannière du lycée en image de fond du header, du fond de page en background-image, des photos du lycée et du Major Martin. Application de styles (border-radius, padding, couleurs).' },
+        { title: 'Navigation et cohérence multi-pages', desc: 'Mise en place d\'un menu de navigation identique sur toutes les pages avec des liens inter-pages fonctionnels. Vérification de la cohérence visuelle et du bon fonctionnement sur l\'ensemble du site.' },
       ],
-      competences: ['Administration Debian', 'SSH & sécurisation', 'Apache VirtualHost', 'MariaDB', 'Gestion droits Linux'],
+      competences: ['HTML5 sémantique', 'CSS3 — float, inline-block', 'Mise en page responsive', 'Intégration graphique', 'Navigation multi-pages', 'Arborescence de site web'],
       screenshots: [
-        { label: 'Installation Debian' },
-        { label: 'Configuration SSH' },
-        { label: 'Apache — page de test' },
-        { label: 'MariaDB — création BDD' },
-      ]
+        { label: 'Page Accueil — Présentation du lycée' },
+        { label: 'Page Contact — Informations et carte' },
+        { label: 'Page BTS SIO — Présentation de la filière' },
+        { label: 'Mise en page CSS — article + aside côte à côte' },
+      ],
+      downloadLink: 'site_lycee_martiniere.zip'
     },
     ap04: {
       num: 'AP 04',
@@ -570,22 +572,34 @@
       </div>
     `).join('');
 
-    const screenshotsHTML = ap.screenshots.map((s, i) => `
+    const screenshotsHTML = ap.screenshots.map((s, i) => {
+      const savedImg = localStorage.getItem(`portfolio_ss_${id}_${i}`);
+      const hasImg = !!savedImg;
+      return `
       <div class="ap-screenshot">
         <label style="display:block;cursor:pointer;">
           <input type="file" accept="image/*" class="ap-img-upload" onchange="handleScreenshotUpload(this, '${id}', ${i})">
-          <div class="ap-screenshot-placeholder" id="ss-placeholder-${id}-${i}">
+          <div class="ap-screenshot-placeholder" id="ss-placeholder-${id}-${i}" style="${hasImg ? 'display:none;' : ''}">
             <span>📷</span>
             <p>Cliquer pour ajouter une capture</p>
           </div>
-          <img id="ss-img-${id}-${i}" src="" alt="${s.label}" style="display:none;width:100%;aspect-ratio:16/9;object-fit:cover;">
+          <img id="ss-img-${id}-${i}" src="${hasImg ? savedImg : ''}" alt="${s.label}" style="${hasImg ? 'display:block;' : 'display:none;'}width:100%;aspect-ratio:16/9;object-fit:cover;">
         </label>
+        ${hasImg ? `<button onclick="removeScreenshot('${id}', ${i})" style="background:rgba(255,80,80,0.1);border:1px solid rgba(255,80,80,0.2);color:#ff6060;font-size:0.72rem;padding:0.25rem 0.6rem;border-radius:0.4rem;cursor:pointer;margin:0.4rem 0.85rem;display:block;">✕ Supprimer</button>` : ''}
         <div class="ap-screenshot-caption">${s.label}</div>
       </div>
-    `).join('');
+    `}).join('');
 
     const competencesHTML = ap.competences.map(c => `<span class="ap-competence">${c}</span>`).join('');
     const tagsHTML = ap.tags.map(t => `<span class="ap-tag">${t}</span>`).join('');
+
+    const downloadHTML = ap.downloadLink ? `
+      <div class="ap-detail-section">
+        <h3>📦 Téléchargement du projet</h3>
+        <p style="font-size:0.88rem;color:var(--muted);margin-bottom:1rem;">Télécharge l'intégralité du site web réalisé lors de ce TP (fichiers HTML, CSS et images).</p>
+        <a href="${ap.downloadLink}" download class="btn btn-primary" style="display:inline-flex;">⬇ Télécharger le site (ZIP)</a>
+      </div>
+    ` : '';
 
     return `
       <div class="ap-detail-header">
@@ -601,6 +615,8 @@
         <p>${ap.intro}</p>
       </div>
 
+      ${downloadHTML}
+
       <div class="ap-detail-section">
         <h3>🪜 Déroulement du TP</h3>
         <div class="ap-steps">${stepsHTML}</div>
@@ -608,7 +624,7 @@
 
       <div class="ap-detail-section">
         <h3>📸 Captures d'écran</h3>
-        <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;">Clique sur chaque carte pour ajouter tes screenshots de TP.</p>
+        <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;">Clique sur chaque carte pour ajouter tes screenshots de TP. Les captures sont <strong style="color:var(--accent2);">sauvegardées automatiquement</strong> dans ton navigateur.</p>
         <div class="ap-screenshots">${screenshotsHTML}</div>
       </div>
 
@@ -629,8 +645,21 @@
       img.src = e.target.result;
       img.style.display = 'block';
       placeholder.style.display = 'none';
+      // Save to localStorage
+      try {
+        localStorage.setItem('portfolio_ss_' + apId + '_' + index, e.target.result);
+      } catch(err) {
+        console.warn('localStorage plein ou indisponible:', err);
+      }
+      // Re-render to show delete button
+      showApDetail(apId);
     };
     reader.readAsDataURL(file);
+  }
+
+  function removeScreenshot(apId, index) {
+    localStorage.removeItem('portfolio_ss_' + apId + '_' + index);
+    showApDetail(apId);
   }
 
   /* ── NAVIGATION ── */
