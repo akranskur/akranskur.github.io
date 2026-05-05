@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Yassine AMOR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('accueil')">Y<span>.</span>AMOR</a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('accueil')" id="nav-accueil" class="active">ACCUEIL</a></li>
+    <li><a href="#" onclick="showPage('cv')" id="nav-cv">CV</a></li>
+    <li><a href="#" onclick="showPage('ap')" id="nav-ap">AP</a></li>
+    <li><a href="#" onclick="showPage('stages')" id="nav-stages">STAGES</a></li>
+    <li><a href="#" onclick="showPage('veille')" id="nav-veille">VEILLE TECH</a></li>
+    <li><a href="#" onclick="showPage('contact')" id="nav-contact">CONTACT</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════ PAGE : ACCUEIL ═══════════════ -->
+<div class="page active" id="page-accueil">
+  <div class="hero">
+    <div class="hero-tag fade-in">Portfolio · BTS SIO SISR</div>
+    <h1 class="fade-in delay-1">Bonjour, je suis<br><span class="name">Yassine AMOR</span></h1>
+    <p class="hero-subtitle fade-in delay-2">Étudiant BTS SIO SISR · Lycée La Martinière Duchère · Lyon</p>
+    <p class="hero-desc fade-in delay-3">
+      Bienvenue sur mon portfolio. Vous y trouverez mes travaux pratiques, mes stages en entreprise
+      et ma montée en compétences tout au long de ma formation en services informatiques aux organisations.
+    </p>
+    <div class="hero-btns fade-in delay-4">
+      <button onclick="showPage('cv')" class="btn btn-primary">📄 Mon CV</button>
+      <a href="https://www.linkedin.com/in/yassine-amor-1a41a7333/" class="btn btn-ghost" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/akranskur" class="btn btn-ghost" target="_blank">🐱 GitHub</a>
+    </div>
+    <div class="section-cards fade-in delay-4">
+      <div class="nav-card" onclick="showPage('cv')">
+        <div class="nav-card-icon">👤</div>
+        <h3>CV</h3>
+        <p>Mon curriculum vitæ complet</p>
+        <span class="nav-card-arrow">→</span>
+      </div>
+      <div class="nav-card" onclick="showPage('ap')">
+        <div class="nav-card-icon">🧪</div>
+        <h3>Ateliers Professionnels</h3>
+        <p>Mes TP et travaux pratiques</p>
+        <span class="nav-card-arrow">→</span>
+      </div>
+      <div class="nav-card" onclick="showPage('stages')">
+        <div class="nav-card-icon">🏢</div>
+        <h3>Mes Stages</h3>
+        <p>Entreprises · Missions · Journaux</p>
+        <span class="nav-card-arrow">→</span>
+      </div>
+      <div class="nav-card" onclick="showPage('veille')">
+        <div class="nav-card-icon">🔭</div>
+        <h3>Veille Technologique</h3>
+        <p>Tendances &amp; actualités tech</p>
+        <span class="nav-card-arrow">→</span>
+      </div>
+    </div>
+  </div>
+  <footer>
+    Portfolio de <strong>Yassine AMOR</strong> · BTS SIO SISR · Lycée La Martinière Duchère · 2025–2027
+  </footer>
+</div>
+
+<!-- ═══════════════ PAGE : CV ═══════════════ -->
+<div class="page" id="page-cv">
+  <div class="page-section">
+    <p class="section-label">Mon curriculum vitæ</p>
+    <h2>Yassine AMOR</h2>
+    <p class="section-intro">Étudiant BTS SIO SISR — 18 ans — Lycée La Martinière Duchère, Lyon</p>
+    <div class="cv-actions">
+      <a href="CV_AMOR_YASSINE.pdf" download class="btn btn-primary">⬇ Télécharger le CV (PDF)</a>
+      <a href="https://www.linkedin.com/in/yassine-amor-1a41a7333/" target="_blank" class="btn btn-ghost">💼 Voir mon LinkedIn</a>
+    </div>
+    <div class="cv-embed-container">
+      <iframe src="CV_AMOR_YASSINE.pdf" title="CV Yassine AMOR"></iframe>
+    </div>
+    <p style="font-size:0.8rem;color:var(--muted);margin-top:0.75rem;text-align:center;">
+      Si le PDF ne s'affiche pas, <a href="CV_AMOR_YASSINE.pdf" style="color:var(--accent)">clique ici pour l'ouvrir</a>.
+    </p>
+  </div>
+  <footer>Portfolio de <strong>Yassine AMOR</strong> · BTS SIO SISR · 2025–2027</footer>
+</div>
+
+<!-- ═══════════════ PAGE : AP ═══════════════ -->
+<div class="page" id="page-ap">
+  <div class="page-section">
+    <p class="section-label">Travaux pratiques</p>
+    <h2>Ateliers Professionnels</h2>
+    <p class="section-intro">
+      Ensemble des TP réalisés en cours tout au long de mon BTS SIO SISR. Chaque atelier illustre
+      une compétence concrète acquise dans le domaine des systèmes, réseaux et sécurité.
+    </p>
+    <div class="tags">
+      <span class="tag">Administration systèmes</span>
+      <span class="tag">Réseaux</span>
+      <span class="tag">Cybersécurité</span>
+      <span class="tag">Virtualisation</span>
+      <span class="tag">Linux</span>
+      <span class="tag">Windows Server</span>
+    </div>
+
+    <h3 style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1.25rem;color:var(--muted);letter-spacing:0.05em;text-transform:uppercase;font-size:0.8rem;">📅 Année 1 — 2025/2026</h3>
+    <div class="ap-grid" style="margin-bottom:2.5rem;">
+
+      <div class="ap-card" onclick="showApDetail('ap01')">
+        <div class="ap-card-header">
+          <span class="ap-num">AP 01</span>
+          <span class="ap-year">2025 — Année 1</span>
+        </div>
+        <h4>Sécurisation d'un serveur WEB</h4>
+        <p>Installation et configuration d'un poste Windows 11 : partitionnement, pilotes, compte utilisateur local et rejoindre un domaine Active Directory.</p>
+        <div class="ap-tags">
+          <span class="ap-tag">Windows 11</span>
+          <span class="ap-tag">Active Directory</span>
+          <span class="ap-tag">Partitionnement</span>
+        </div>
+        <span class="ap-card-open-hint">→ Voir le détail</span>
+      </div>
+
+      <div class="ap-card" onclick="showApDetail('ap02')">
+        <div class="ap-card-header">
+          <span class="ap-num">AP 02</span>
+          <span class="ap-year">2025 — Année 1</span>
+        </div>
+        <h4>Mise en place d'un réseau local</h4>
+        <p>Câblage RJ45, configuration de switches Cisco, adressage IP statique et dynamique (DHCP), test de connectivité et dépannage.</p>
+        <div class="ap-tags">
+          <span class="ap-tag">Cisco IOS</span>
+          <span class="ap-tag">DHCP</span>
+          <span class="ap-tag">IP / VLANs</span>
+        </div>
+        <span class="ap-card-open-hint">→ Voir le détail</span>
+      </div>
+
+      <div class="ap-card" onclick="showApDetail('ap03')">
+        <div class="ap-card-header">
+          <span class="ap-num">AP 03</span>
+          <span class="ap-year">2025 — Année 1</span>
+        </div>
+        <h4>Déploiement d'un serveur Linux</h4>
+        <p>Installation d'un serveur Debian, configuration SSH, gestion des utilisateurs, droits et services (Apache, MariaDB).</p>
+        <div class="ap-tags">
+          <span class="ap-tag">Debian</span>
+          <span class="ap-tag">SSH</span>
+          <span class="ap-tag">Apache</span>
+          <span class="ap-tag">MariaDB</span>
+        </div>
+        <span class="ap-card-open-hint">→ Voir le détail</span>
+      </div>
+
+    </div>
+
+    <h3 style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:1.25rem;color:var(--muted);letter-spacing:0.05em;text-transform:uppercase;font-size:0.8rem;">📅 Année 2 — 2026/2027</h3>
+    <div class="ap-grid">
+      <div class="ap-placeholder">
+        <div class="ph-icon">🔒</div>
+        <p>Audit sécurité PingCastle — à venir</p>
+      </div>
+      <div class="ap-placeholder">
+        <div class="ph-icon">🌐</div>
+        <p>Routage OSPF / HSRP — à venir</p>
+      </div>
+      <div class="ap-placeholder">
+        <div class="ph-icon">📊</div>
+        <p>Supervision PRTG — à venir</p>
+      </div>
+      <div class="ap-placeholder">
+        <div class="ph-icon">🔥</div>
+        <p>pfSense / VPN OpenVPN — à venir</p>
+      </div>
+    </div>
+  </div>
+  <footer>Portfolio de <strong>Yassine AMOR</strong> · BTS SIO SISR · 2025–2027</footer>
+</div>
+
+<!-- ═══════════════ PAGE : STAGES ═══════════════ -->
+<div class="page" id="page-stages">
+  <div class="page-section">
+    <p class="section-label">Expériences professionnelles</p>
+    <h2>Mes Stages</h2>
+    <p class="section-intro">
+      Compte-rendu de mes stages en entreprise : missions effectuées, compétences mobilisées et journal de bord.
+    </p>
+
+    <!-- STAGE DE 3e -->
+    <div class="stage-card">
+      <div class="stage-header">
+        <span class="stage-badge">Stage de 3ème</span>
+        <span class="stage-date">Février 2022</span>
+      </div>
+      <h3>Entreprise Nextep</h3>
+      <p class="stage-lieu">📍 Lyon — Technicien informatique</p>
+      <p class="stage-desc">
+        Premier contact avec le monde professionnel de l'informatique. J'ai intégré une équipe de techniciens
+        pour découvrir le support utilisateur et la maintenance du parc informatique.
+      </p>
+      <ul class="missions-list">
+        <li>Configuration de postes de travail (Windows)</li>
+        <li>Installation et paramétrage de périphériques (imprimantes, écrans)</li>
+        <li>Résolution de pannes matérielles et logicielles simples</li>
+        <li>Découverte du support utilisateur et des procédures de ticketing</li>
+      </ul>
+      <div class="journal-placeholder">
+        <div class="jp-icon">📔</div>
+        <div class="jp-text">
+          <strong>Journal de stage</strong>
+          <span>À intégrer — glisse ton journal de stage ici ou ajoute un lien vers le PDF</span>
+        </div>
+        <a href="#" class="btn btn-ghost btn-sm">+ Ajouter</a>
+      </div>
+    </div>
+
+    <!-- STAGE BTS ANNÉE 1 -->
+    <div class="stage-card">
+      <div class="stage-header">
+        <span class="stage-badge">Stage BTS — Année 1</span>
+        <span class="stage-date">2026 — à venir</span>
+      </div>
+      <h3>SPIE</h3>
+      <p class="stage-lieu">📍 À confirmer — Technicien systèmes &amp; réseaux</p>
+      <p class="stage-desc">
+        Stage de première année de BTS SIO SISR. Les missions porteront sur l'administration
+        de l'infrastructure informatique, le support aux utilisateurs et le déploiement de postes.
+      </p>
+      <ul class="missions-list">
+        <li>Administration du parc informatique et inventaire</li>
+        <li>Support utilisateurs N1/N2</li>
+        <li>Déploiement et configuration de postes</li>
+        <li>Participation à des projets d'infrastructure réseau</li>
+      </ul>
+      <div class="journal-placeholder">
+        <div class="jp-icon">📔</div>
+        <div class="jp-text">
+          <strong>Journal de stage</strong>
+          <span>Le journal sera disponible à l'issue du stage</span>
+        </div>
+        <span class="btn btn-ghost btn-sm" style="opacity:0.5;cursor:default;">En attente</span>
+      </div>
+    </div>
+
+    <!-- STAGE BTS ANNÉE 2 -->
+    <div class="stage-coming">
+      <div class="big">🏢</div>
+      <strong style="display:block;font-family:'Syne',sans-serif;font-size:1rem;margin-bottom:0.4rem;">Stage BTS — Année 2 (2027)</strong>
+      <p>Cette section sera complétée lors du second stage en entreprise.</p>
+    </div>
+  </div>
+  <footer>Portfolio de <strong>Yassine AMOR</strong> · BTS SIO SISR · 2025–2027</footer>
+</div>
+
+<!-- ═══════════════ PAGE : VEILLE TECHNOLOGIQUE ═══════════════ -->
+<div class="page" id="page-veille">
+  <div class="page-section">
+    <p class="section-label">Actualités &amp; tendances</p>
+    <h2>Veille Technologique</h2>
+    <p class="section-intro">
+      La veille technologique consiste à surveiller régulièrement les évolutions du secteur IT
+      pour rester à jour sur les nouvelles pratiques, outils et menaces. Voici les thématiques que je suis.
+    </p>
+
+    <div class="veille-intro-box">
+      <div class="big-icon">🔭</div>
+      <div>
+        <p>
+          <strong>Pourquoi faire une veille ?</strong> En BTS SIO SISR, rester informé des évolutions
+          technologiques est essentiel. Les cybermenaces évoluent chaque jour, les protocoles réseaux
+          se modernisent et les infrastructures cloud transforment les métiers de l'IT.
+          Je réalise ma veille via des flux RSS, des newsletters spécialisées et des plateformes communautaires.
+        </p>
+      </div>
+    </div>
+
+    <div class="veille-grid">
+
+      <div class="veille-card">
+        <div class="veille-card-top">
+          <div class="veille-icon">🔐</div>
+          <div>
+            <div class="veille-categ">Cybersécurité</div>
+            <h4>Sécurité des systèmes d'information</h4>
+          </div>
+        </div>
+        <p>Suivi des nouvelles vulnérabilités (CVE), des ransomwares, des techniques d'attaque (phishing, intrusion) et des bonnes pratiques de défense (Zero Trust, MFA, segmentation réseau).</p>
+        <div class="veille-sources">
+          <span class="veille-source">ANSSI</span>
+          <span class="veille-source">CVE Mitre</span>
+          <span class="veille-source">Zataz</span>
+          <span class="veille-source">The Hacker News</span>
+        </div>
+      </div>
+
+      <div class="veille-card">
+        <div class="veille-card-top">
+          <div class="veille-icon">☁️</div>
+          <div>
+            <div class="veille-categ">Cloud &amp; Infrastructure</div>
+            <h4>Cloud computing &amp; virtualisation</h4>
+          </div>
+        </div>
+        <p>Évolution des plateformes cloud (AWS, Azure, GCP), des technologies de conteneurisation (Docker, Kubernetes) et des architectures hybrides qui transforment les infrastructures d'entreprise.</p>
+        <div class="veille-sources">
+          <span class="veille-source">AWS Blog</span>
+          <span class="veille-source">Azure Updates</span>
+          <span class="veille-source">InfoQ</span>
+        </div>
+      </div>
+
+      <div class="veille-card">
+        <div class="veille-card-top">
+          <div class="veille-icon">🌐</div>
+          <div>
+            <div class="veille-categ">Réseaux</div>
+            <h4>Évolutions des protocoles réseaux</h4>
+          </div>
+        </div>
+        <p>Montée en puissance de IPv6, SD-WAN, Wi-Fi 7 et des architectures réseau définies par logiciel. Suivi des normes IEEE et des équipementiers (Cisco, Juniper).</p>
+        <div class="veille-sources">
+          <span class="veille-source">Cisco Blog</span>
+          <span class="veille-source">NetworkWorld</span>
+          <span class="veille-source">IEEE</span>
+        </div>
+      </div>
+
+      <div class="veille-card">
+        <div class="veille-card-top">
+          <div class="veille-icon">🤖</div>
+          <div>
+            <div class="veille-categ">Intelligence Artificielle</div>
+            <h4>IA &amp; automatisation IT</h4>
+          </div>
+        </div>
+        <p>Impact de l'IA sur les métiers de l'informatique : outils d'automatisation des tâches d'administration, détection d'anomalies réseau par ML, et AIOps pour la supervision intelligente.</p>
+        <div class="veille-sources">
+          <span class="veille-source">MIT Tech Review</span>
+          <span class="veille-source">LeMagIT</span>
+          <span class="veille-source">ZDNet FR</span>
+        </div>
+      </div>
+
+      <div class="veille-card">
+        <div class="veille-card-top">
+          <div class="veille-icon">🐧</div>
+          <div>
+            <div class="veille-categ">Systèmes</div>
+            <h4>Linux &amp; open source</h4>
+          </div>
+        </div>
+        <p>Nouveautés du noyau Linux, des distributions serveur (Debian, Ubuntu Server, RHEL), des outils d'automatisation (Ansible, Terraform) et de la communauté open source.</p>
+        <div class="veille-sources">
+          <span class="veille-source">Linuxfr.org</span>
+          <span class="veille-source">Phoronix</span>
+          <span class="veille-source">LWN.net</span>
+        </div>
+      </div>
+
+      <div class="veille-card">
+        <div class="veille-card-top">
+          <div class="veille-icon">📱</div>
+          <div>
+            <div class="veille-categ">Actualités tech</div>
+            <h4>Actualités générales du secteur</h4>
+          </div>
+        </div>
+        <p>Suivi des grandes tendances du marché IT : nouveaux équipements, sorties de systèmes d'exploitation, acquisitions d'entreprises et évolution des métiers de l'informatique en France.</p>
+        <div class="veille-sources">
+          <span class="veille-source">01net</span>
+          <span class="veille-source">LeMonde Informatique</span>
+          <span class="veille-source">Next.ink</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+    <p style="font-size:0.85rem;color:var(--muted);font-style:italic;">
+      💡 Cette section est amenée à évoluer tout au long de ma formation. J'y ajouterai des synthèses,
+      des articles commentés et des fiches de veille au fur et à mesure.
+    </p>
+  </div>
+  <footer>Portfolio de <strong>Yassine AMOR</strong> · BTS SIO SISR · 2025–2027</footer>
+</div>
+
+<!-- ═══════════════ PAGE : CONTACT ═══════════════ -->
+<div class="page" id="page-contact">
+  <div class="page-section">
+    <p class="section-label">Me contacter</p>
+    <h2>Restons en contact</h2>
+    <p class="section-intro">
+      Vous pouvez me contacter par e-mail, téléphone ou via mes profils professionnels.
+      Je suis disponible pour tout échange concernant un stage ou une alternance.
+    </p>
+
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:yassineamor69@outlook.fr">
+        <div class="contact-icon">📧</div>
+        <div>
+          <div class="c-label">E-mail</div>
+          <div class="c-value">yassineamor69@outlook.fr</div>
+        </div>
+      </a>
+      <a class="contact-card" href="tel:+33628684016">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="c-label">Téléphone</div>
+          <div class="c-value">06 28 68 40 16</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/yassine-amor-1a41a7333/" target="_blank">
+        <div class="contact-icon">💼</div>
+        <div>
+          <div class="c-label">LinkedIn</div>
+          <div class="c-value">yassine-amor-1a41a7333</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://github.com/akranskur" target="_blank">
+        <div class="contact-icon">🐱</div>
+        <div>
+          <div class="c-label">GitHub</div>
+          <div class="c-value">github.com/akranskur</div>
+        </div>
+      </a>
+      <div class="contact-card" style="cursor:default;">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="c-label">Localisation</div>
+          <div class="c-value">Sainte-Foy-lès-Lyon (69)</div>
+        </div>
+      </div>
+      <div class="contact-card" style="cursor:default;">
+        <div class="contact-icon">🎓</div>
+        <div>
+          <div class="c-label">Formation</div>
+          <div class="c-value">BTS SIO SISR — La Martinière Duchère</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-cta">
+      <h3>Disponible pour un stage 🚀</h3>
+      <p>
+        Je recherche un stage en entreprise dans le domaine des systèmes et réseaux (SISR).
+        N'hésitez pas à me contacter pour discuter de vos besoins.
+      </p>
+      <a href="mailto:yassineamor69@outlook.fr" class="btn btn-primary">✉️ M'envoyer un e-mail</a>
+    </div>
+  </div>
+  <footer>Portfolio de <strong>Yassine AMOR</strong> · BTS SIO SISR · 2025–2027</footer>
+</div>
+
+<!-- ═══════════════ PAGE : AP DETAIL ═══════════════ -->
+<div id="page-ap-detail">
+  <div class="page-section">
+    <button class="ap-detail-back" onclick="closeApDetail()">← Retour aux Ateliers Professionnels</button>
+    <div id="ap-detail-content"></div>
+  </div>
+  <footer>Portfolio de <strong>Yassine AMOR</strong> · BTS SIO SISR · 2025–2027</footer>
+</div>
+
+<script>
+  /* ── DATA : contenu de chaque AP ── */
+  const apData = {
+    ap01: {
+      num: 'AP 01',
+      title: 'Serveur de fichiers SAMBA sous Debian — Partie 1',
+      year: '2026 — Année 1',
+      intro: 'Ce TP porte sur la mise en place d\'un serveur de fichiers SAMBA sous GNU/Debian. L\'objectif est de configurer le partage de ressources réseau entre un serveur Debian et des clients Windows/Debian via le protocole SMB (port 139/445). Le travail couvre le clonage du serveur, la gestion des utilisateurs et groupes Linux, la configuration des droits d\'accès (chmod/chown) et la création de partages cloisonnés pour deux groupes d\'étudiants.',
+      tags: ['Debian 13', 'SAMBA / SMB', 'Droits Linux', 'SSH / PuTTY', 'Utilisateurs & Groupes'],
+      steps: [
+        { title: 'Configuration initiale du serveur SAMBA', desc: 'Clonage de la machine de référence Debian, adaptation du hostname et du fichier <code>/etc/hosts</code>, configuration de l\'adresse IP statique (172.30.1xx.139/24). Vérification de la connectivité avec les clients et de l\'accès Internet via le DNS (<code>resolvconf</code>).' },
+        { title: 'Paramétrage des fichiers hosts clients', desc: 'Configuration du fichier <code>/etc/hosts</code> des machines clientes (Debian et Windows) pour résoudre le serveur SAMBA à la fois par son nom machine et par l\'alias <code>PartageSMB</code>. Tests de ping par adresse IP, par nom et par alias depuis les deux clients.' },
+        { title: 'Création des groupes et utilisateurs Linux', desc: 'Modification de <code>/etc/skel/.bashrc</code> pour préconfigurer les alias (<code>ll</code>, <code>la</code>, <code>l</code>) pour tous les futurs utilisateurs. Création des groupes <code>gpb1sio1</code> (GID 1001) et <code>gpb1sio2</code> (GID 1002), puis des utilisateurs <code>alicia</code> et <code>nabil</code> dans gpb1sio1, et <code>clara</code> et <code>hedi</code> dans gpb1sio2 via <code>adduser</code>.' },
+        { title: 'Modification des droits des répertoires personnels', desc: 'Application de la commande <code>chmod u=rwx,g=rx,o= alicia clara hedi nabil</code> sur les répertoires <code>/home/</code> des utilisateurs. Résultat : le propriétaire a tous les droits (rwx), le groupe peut lire et entrer (r-x), les autres n\'ont aucun accès (---). Tests croisés avec nabil et clara pour valider l\'étanchéité.' },
+        { title: 'Création de partages et gestion des droits de groupe', desc: 'Création de l\'arborescence <code>/home/B1Sio/B1Sio1</code> et <code>/home/B1Sio/B1Sio2</code>. Attribution des groupes propriétaires via <code>chown :gpb1sio1 B1Sio/B1Sio1</code> et <code>chown :gpb1sio2 B1Sio/B1Sio2</code>. Configuration des droits croisés : gpb1sio1 a lecture+écriture sur B1Sio1 et lecture seule sur B1Sio2, et inversement pour gpb1sio2. Tests de validation des restrictions depuis les comptes utilisateurs.' }
+      ],
+      competences: ['Administration Debian (clone, hostname, réseau)', 'Gestion utilisateurs et groupes Linux (adduser, addgroup)', 'Droits de fichiers Linux (chmod, chown)', 'Connexion SSH distante (PuTTY)', 'Tests de connectivité et validation des droits', 'Protocole SMB / SAMBA'],
+      screenshots: [
+        { label: 'Fichiers hosts et hostname configurés sur le serveur SAMBA' },
+        { label: 'Ping depuis les clients par IP, nom et alias PartageSMB' },
+        { label: 'Répertoires utilisateurs avec propriétaire et groupe corrects (ls -l /home)' },
+        { label: 'Tests de validation des droits croisés entre utilisateurs' },
+        { label: 'Arborescence B1Sio et résultat des commandes ls -l' }
+      ]
+    },
+    ap02: {
+      num: 'AP 02',
+      title: 'Synthèse SISR2 — Packet Tracer (LEBTA & DOUMAGAMOU)',
+      year: '2025 — Année 1',
+      intro: 'Activité de synthèse Packet Tracer portant sur la société fictive LEBTA & DOUMAGAMOU, implantée sur 2 sites interconnectés par une liaison privée dédiée. Ce TP couvre l\'ensemble des thématiques réseaux du Bloc 2 : adressage IP et sous-réseaux, routage dynamique RIP v2, VLANs, services DHCP et DNS, et configuration du NAT/PAT pour l\'accès à Internet depuis le site de DOUMAGAMOU. Un bouton "Check Result" permet une auto-évaluation automatique (score cible : 226/226).',
+      tags: ['Cisco IOS', 'VLANs', 'RIP v2', 'DHCP', 'NAT/PAT', 'Packet Tracer'],
+      steps: [
+        { title: 'Adressage des équipements (Partie 1)', desc: 'Configuration statique des postes, serveurs et routeurs selon la table d\'adressage fournie. Site LEBTA : routeur Rt-LEBTA avec sous-interfaces (Fa0/0.100 en /26, Fa0/0.200 en /28, Fa0/0.300 en /27). Site DOUMAGAMOU : Rt-DOUMA avec les réseaux 172.21.0.0/16 et 172.22.0.0/16. Attribution des adresses IP de management des commutateurs Sw1, Sw2, Sw3 et configuration des passerelles par défaut.' },
+        { title: 'Routage dynamique RIP v2 (Partie 2)', desc: 'Mise en place du protocole de routage dynamique RIP version 2 sur les trois routeurs (Rt-LEBTA, Rt-LEBTA-DOUMA, Rt-DOUMA) pour les réseaux privés uniquement. Configuration d\'une route par défaut sur Rt-DOUMA pour l\'accès à Internet via le Routeur-Internet (réseau 200.100.1.0/24). Aucune activation RIP sur les réseaux publics.' },
+        { title: 'Mise en place des VLANs (Partie 3)', desc: 'Déclaration et nommage des VLANs sur les 3 commutateurs d\'étage du site LEBTA : VLAN 100 (COMMERCIAL, /26), VLAN 200 (ADMINISTRATIF, /28), VLAN 300 (PRODUCTION, /27). Configuration des ports en mode access (ports 1–5 VLAN100, 6–10 VLAN200, 11–15 VLAN300) et des ports trunk 802.1q (ports 23–24). Mise en place du routage inter-VLAN sur Rt-LEBTA via sous-interfaces.' },
+        { title: 'Configuration DHCP et DNS (Partie 4)', desc: 'Configuration du ServerDHCP (DMZ de LEBTA) avec deux pools : poolVLAN200 (5 adresses exclues, 5 distribuées) et poolVLAN300 (3 adresses exclues, 20 distribuées), avec agent-relais sur les interfaces concernées. Pool poolLAN-DOUMA sur Rt-DOUMA pour le poste PC7 (plage 172.21.100.x). Configuration du ServerDNS avec les entrées ocs.doumagamou.com et glpi.doumagamou.com pointant sur les serveurs Web de DOUMAGAMOU.' },
+        { title: 'NAT/PAT et vérification de connectivité (Parties 5 & 6)', desc: 'Configuration du NAT/PAT sur Rt-DOUMA avec l\'access-list n°10 autorisant 5 réseaux (192.168.11.0/26, 192.168.11.64/28, 192.168.12.0/24, 172.21.0.0/16, 172.22.0.0/16) — le VLAN PRODUCTION étant exclu. Redirection de port (port forwarding) sur l\'IP publique 200.100.1.1:80 vers le ServerGLPI. Tests de connectivité via 26 scénarios pré-programmés (cible : tous "Correct").' }
+      ],
+      competences: ['Adressage IP et calcul de sous-réseaux', 'Routage dynamique RIP v2', 'Configuration VLANs et trunk 802.1q', 'Routage inter-VLAN (Router-on-a-stick)', 'Serveurs DHCP (pools, agent-relais)', 'Configuration DNS', 'NAT/PAT et redirection de ports', 'Cisco IOS CLI', 'Packet Tracer'],
+      screenshots: [
+        { label: 'Schéma de la maquette — topologie globale' },
+        { label: 'Configuration RIP v2 et routes statiques sur les routeurs' },
+        { label: 'VLANs et ports trunk sur les commutateurs d\'étage' },
+        { label: 'Pools DHCP et configuration DNS' },
+        { label: 'Résultats des 26 tests de connectivité (score 226/226)' }
+      ]
+    },
+    ap03: {
+      num: 'AP 03',
+      title: 'Déploiement d\'un serveur Linux',
+      year: '2025 — Année 1',
+      intro: 'Installation et configuration complète d\'un serveur Debian en environnement de production simulé. Ce TP couvre la sécurisation de l\'accès SSH, la gestion fine des utilisateurs et des droits, ainsi que le déploiement des services web Apache et de base de données MariaDB.',
+      tags: ['Debian', 'SSH', 'Apache', 'MariaDB'],
+      steps: [
+        { title: 'Installation de Debian', desc: 'Installation minimale de Debian (sans environnement graphique), choix des partitions (swap, /, /home), configuration du fuseau horaire et du réseau.' },
+        { title: 'Sécurisation SSH', desc: 'Modification du port SSH par défaut, désactivation de la connexion root directe, mise en place de l\'authentification par clé publique/privée.' },
+        { title: 'Gestion des utilisateurs et droits', desc: 'Création de comptes utilisateurs, attribution des groupes, configuration des droits via chmod/chown et gestion des accès sudo.' },
+        { title: 'Déploiement Apache', desc: 'Installation d\'Apache2, création d\'un VirtualHost, activation des modules nécessaires (rewrite, ssl). Test d\'affichage d\'une page web personnalisée.' },
+        { title: 'Configuration MariaDB', desc: 'Installation de MariaDB, sécurisation initiale (mysql_secure_installation), création d\'une base de données et d\'un utilisateur dédié avec les droits appropriés.' },
+      ],
+      competences: ['Administration Debian', 'SSH & sécurisation', 'Apache VirtualHost', 'MariaDB', 'Gestion droits Linux'],
+      screenshots: [
+        { label: 'Installation Debian' },
+        { label: 'Configuration SSH' },
+        { label: 'Apache — page de test' },
+        { label: 'MariaDB — création BDD' },
+      ]
+    },
+    ap04: {
+      num: 'AP 04',
+      title: 'Virtualisation avec VirtualBox / Proxmox',
+      year: '2025 — Année 1',
+      intro: 'Découverte et maîtrise des solutions de virtualisation open-source. Ce TP porte sur la création et la gestion de machines virtuelles, la configuration des modes réseau (NAT, bridge, réseau interne), ainsi que les fonctionnalités avancées comme les snapshots et le clonage.',
+      tags: ['VirtualBox', 'Proxmox', 'Snapshots'],
+      steps: [
+        { title: 'Création de machines virtuelles', desc: 'Création de VMs (Windows et Linux) dans VirtualBox, allocation des ressources (RAM, CPU, stockage), montage de l\'ISO d\'installation.' },
+        { title: 'Configuration réseau NAT & Bridge', desc: 'Compréhension des modes réseau : NAT (accès Internet via l\'hôte), Bridge (même réseau que l\'hôte), réseau interne (isolation). Configuration et tests.' },
+        { title: 'Snapshots et restauration', desc: 'Prise de snapshots à des étapes clés, restauration d\'un état précédent après une modification hasardeuse. Gestion de l\'arbre de snapshots.' },
+        { title: 'Clonage de VMs', desc: 'Clonage lié et clonage complet. Utilisation du clone pour dupliquer rapidement un environnement de test configuré.' },
+        { title: 'Introduction à Proxmox', desc: 'Interface web de Proxmox VE, création d\'une VM via l\'interface, configuration des ressources et accès via la console VNC.' },
+      ],
+      competences: ['VirtualBox', 'Proxmox VE', 'Modes réseau VM', 'Snapshots', 'Clonage', 'Administration hyperviseur'],
+      screenshots: [
+        { label: 'Interface VirtualBox' },
+        { label: 'Configuration réseau bridge' },
+        { label: 'Gestion des snapshots' },
+        { label: 'Interface Proxmox VE' },
+      ]
+    }
+  };
+
+  /* ── RENDER AP DETAIL ── */
+  function renderApDetail(id) {
+    const ap = apData[id];
+    if (!ap) return '<p>AP introuvable.</p>';
+
+    const stepsHTML = ap.steps.map((s, i) => `
+      <div class="ap-step">
+        <div class="ap-step-dot"></div>
+        <div class="ap-step-content">
+          <h4>${s.title}</h4>
+          <p>${s.desc}</p>
+        </div>
+      </div>
+    `).join('');
+
+    const screenshotsHTML = ap.screenshots.map((s, i) => `
+      <div class="ap-screenshot">
+        <label style="display:block;cursor:pointer;">
+          <input type="file" accept="image/*" class="ap-img-upload" onchange="handleScreenshotUpload(this, '${id}', ${i})">
+          <div class="ap-screenshot-placeholder" id="ss-placeholder-${id}-${i}">
+            <span>📷</span>
+            <p>Cliquer pour ajouter une capture</p>
+          </div>
+          <img id="ss-img-${id}-${i}" src="" alt="${s.label}" style="display:none;width:100%;aspect-ratio:16/9;object-fit:cover;">
+        </label>
+        <div class="ap-screenshot-caption">${s.label}</div>
+      </div>
+    `).join('');
+
+    const competencesHTML = ap.competences.map(c => `<span class="ap-competence">${c}</span>`).join('');
+    const tagsHTML = ap.tags.map(t => `<span class="ap-tag">${t}</span>`).join('');
+
+    return `
+      <div class="ap-detail-header">
+        <span class="ap-detail-num">${ap.num}</span>
+        <div>
+          <h2>${ap.title}</h2>
+          <div class="ap-detail-meta">${ap.year}</div>
+          <div class="ap-tags" style="margin-top:0.75rem;">${tagsHTML}</div>
+        </div>
+      </div>
+
+      <div class="ap-detail-intro">
+        <p>${ap.intro}</p>
+      </div>
+
+      <div class="ap-detail-section">
+        <h3>🪜 Déroulement du TP</h3>
+        <div class="ap-steps">${stepsHTML}</div>
+      </div>
+
+      <div class="ap-detail-section">
+        <h3>📸 Captures d'écran</h3>
+        <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;">Clique sur chaque carte pour ajouter tes screenshots de TP.</p>
+        <div class="ap-screenshots">${screenshotsHTML}</div>
+      </div>
+
+      <div class="ap-detail-section">
+        <h3>🎯 Compétences acquises</h3>
+        <div class="ap-competences">${competencesHTML}</div>
+      </div>
+    `;
+  }
+
+  function handleScreenshotUpload(input, apId, index) {
+    const file = input.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const img = document.getElementById('ss-img-' + apId + '-' + index);
+      const placeholder = document.getElementById('ss-placeholder-' + apId + '-' + index);
+      img.src = e.target.result;
+      img.style.display = 'block';
+      placeholder.style.display = 'none';
+    };
+    reader.readAsDataURL(file);
+  }
+
+  /* ── NAVIGATION ── */
+  function showApDetail(id) {
+    document.querySelectorAll('.page, #page-ap-detail').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById('nav-ap').classList.add('active');
+    document.getElementById('ap-detail-content').innerHTML = renderApDetail(id);
+    document.getElementById('page-ap-detail').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function closeApDetail() {
+    document.querySelectorAll('.page, #page-ap-detail').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById('page-ap').classList.add('active');
+    document.getElementById('nav-ap').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showPage(id) {
+    document.querySelectorAll('.page, #page-ap-detail').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    document.getElementById('nav-' + id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
