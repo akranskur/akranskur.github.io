@@ -468,13 +468,29 @@
         { title: 'Création de partages et gestion des droits de groupe', desc: 'Création de l\'arborescence <code>/home/B1Sio/B1Sio1</code> et <code>/home/B1Sio/B1Sio2</code>. Attribution des groupes propriétaires via <code>chown :gpb1sio1 B1Sio/B1Sio1</code> et <code>chown :gpb1sio2 B1Sio/B1Sio2</code>. Configuration des droits croisés : gpb1sio1 a lecture+écriture sur B1Sio1 et lecture seule sur B1Sio2, et inversement pour gpb1sio2. Tests de validation des restrictions depuis les comptes utilisateurs.' }
       ],
       competences: ['Administration Debian (clone, hostname, réseau)', 'Gestion utilisateurs et groupes Linux (adduser, addgroup)', 'Droits de fichiers Linux (chmod, chown)', 'Connexion SSH distante (PuTTY)', 'Tests de connectivité et validation des droits', 'Protocole SMB / SAMBA'],
-      screenshots: [
-        { label: 'Fichiers hosts et hostname configurés sur le serveur SAMBA' },
-        { label: 'Ping depuis les clients par IP, nom et alias PartageSMB' },
-        { label: 'Répertoires utilisateurs avec propriétaire et groupe corrects (ls -l /home)' },
-        { label: 'Tests de validation des droits croisés entre utilisateurs' },
-        { label: 'Arborescence B1Sio et résultat des commandes ls -l' }
-      ]
+      screenshots: [       
+        {
+          label: 'Fichiers hosts et hostname configurés sur le serveur SAMBA',
+          src: 'image/tp/ap01/hosts.png'
+        },
+        {
+          label: 'Ping depuis les clients par IP, nom et alias PartageSMB',
+          src: 'image/tp/ap01/ping.png'
+        },
+        {
+          label: 'Répertoires utilisateurs avec propriétaire et groupe corrects (ls -l /home)',
+          src: 'image/tp/ap01/droits-home.png'
+        },
+        {
+          label: 'Tests de validation des droits croisés entre utilisateurs',
+          src: 'image/tp/ap01/tests-droits.png'
+        },
+        {
+          label: 'Arborescence B1Sio et résultat des commandes ls -l',
+          src: 'image/tp/ap01/arborescence.png'
+        }
+
+    ]
     },
     ap02: {
       num: 'AP 02',
@@ -491,11 +507,27 @@
       ],
       competences: ['Adressage IP et calcul de sous-réseaux', 'Routage dynamique RIP v2', 'Configuration VLANs et trunk 802.1q', 'Routage inter-VLAN (Router-on-a-stick)', 'Serveurs DHCP (pools, agent-relais)', 'Configuration DNS', 'NAT/PAT et redirection de ports', 'Cisco IOS CLI', 'Packet Tracer'],
       screenshots: [
-        { label: 'Schéma de la maquette — topologie globale' },
-        { label: 'Configuration RIP v2 et routes statiques sur les routeurs' },
-        { label: 'VLANs et ports trunk sur les commutateurs d\'étage' },
-        { label: 'Pools DHCP et configuration DNS' },
-        { label: 'Résultats des 26 tests de connectivité (score 226/226)' }
+       {
+        label: 'Schéma de la maquette — topologie globale',
+        src: 'image/tp/ap02/topologie.png'
+      },
+      {
+        label: 'Configuration RIP v2 et routes statiques sur les routeurs',
+        src: 'image/tp/ap02/rip.png'
+      },
+      {
+        label: 'VLANs et ports trunk sur les commutateurs d’étage',
+        src: 'image/tp/ap02/vlans.png'
+      },
+      {
+        label: 'Pools DHCP et configuration DNS',
+        src: 'image/tp/ap02/dhcp-dns.png'
+      },
+      {
+        label: 'Résultats des 26 tests de connectivité',
+        src: 'image/tp/ap02/score.png'
+      }
+
       ]
     },
     ap03: {
@@ -513,10 +545,23 @@
       ],
       competences: ['HTML5 sémantique', 'CSS3 — float, inline-block', 'Mise en page responsive', 'Intégration graphique', 'Navigation multi-pages', 'Arborescence de site web'],
       screenshots: [
-        { label: 'Page Accueil — Présentation du lycée' },
-        { label: 'Page Contact — Informations et carte' },
-        { label: 'Page BTS SIO — Présentation de la filière' },
-        { label: 'Mise en page CSS — article + aside côte à côte' },
+        {
+          label: 'Page Accueil — Présentation du lycée',
+          src: 'image/tp/ap03/accueil.png'
+        },
+        {
+          label: 'Page Contact — Informations et carte',
+          src: 'image/tp/ap03/contact.png'
+        },
+        {
+          label: 'Page BTS SIO — Présentation de la filière',
+          src: 'image/tp/ap03/bts-sio.png'
+        },
+        {
+          label: 'Mise en page CSS — article + aside côte à côte',
+          src: 'image/tp/ap03/css-layout.png'
+        }
+
       ],
       downloadLink: 'site_lycee_martiniere.zip'
     },
@@ -559,22 +604,23 @@
     `).join('');
 
     const screenshotsHTML = ap.screenshots.map((s, i) => {
-      const savedImg = localStorage.getItem(`portfolio_ss_${id}_${i}`);
-      const hasImg = !!savedImg;
       return `
-      <div class="ap-screenshot">
-        <label style="display:block;cursor:pointer;">
-          <input type="file" accept="image/*" class="ap-img-upload" onchange="handleScreenshotUpload(this, '${id}', ${i})">
-          <div class="ap-screenshot-placeholder" id="ss-placeholder-${id}-${i}" style="${hasImg ? 'display:none;' : ''}">
-            <span>📷</span>
-            <p>Cliquer pour ajouter une capture</p>
-          </div>
-          <img id="ss-img-${id}-${i}" src="${hasImg ? savedImg : ''}" alt="${s.label}" style="${hasImg ? 'display:block;' : 'display:none;'}width:100%;aspect-ratio:16/9;object-fit:cover;">
-        </label>
-        ${hasImg ? `<button onclick="removeScreenshot('${id}', ${i})" style="background:rgba(255,80,80,0.1);border:1px solid rgba(255,80,80,0.2);color:#ff6060;font-size:0.72rem;padding:0.25rem 0.6rem;border-radius:0.4rem;cursor:pointer;margin:0.4rem 0.85rem;display:block;">✕ Supprimer</button>` : ''}
-        <div class="ap-screenshot-caption">${s.label}</div>
-      </div>
-    `}).join('');
+        <div class="ap-screenshot">
+          ${
+            s.src
+              ? `<img src="${s.src}" alt="${s.label}" class="ap-screenshot-img">`
+              : `
+                <div class="ap-screenshot-placeholder">
+                  <span>📷</span>
+                  <p>Capture à ajouter</p>
+                </div>
+              `
+          }
+          <div class="ap-screenshot-caption">${s.label}</div>
+        </div>
+  `    ;
+    }).join('');
+
 
     const competencesHTML = ap.competences.map(c => `<span class="ap-competence">${c}</span>`).join('');
     const tagsHTML = ap.tags.map(t => `<span class="ap-tag">${t}</span>`).join('');
@@ -610,7 +656,6 @@
 
       <div class="ap-detail-section">
         <h3>📸 Captures d'écran</h3>
-        <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;">Clique sur chaque carte pour ajouter tes screenshots de TP. Les captures sont <strong style="color:var(--accent2);">sauvegardées automatiquement</strong> dans ton navigateur.</p>
         <div class="ap-screenshots">${screenshotsHTML}</div>
       </div>
 
@@ -619,33 +664,6 @@
         <div class="ap-competences">${competencesHTML}</div>
       </div>
     `;
-  }
-
-  function handleScreenshotUpload(input, apId, index) {
-    const file = input.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      const img = document.getElementById('ss-img-' + apId + '-' + index);
-      const placeholder = document.getElementById('ss-placeholder-' + apId + '-' + index);
-      img.src = e.target.result;
-      img.style.display = 'block';
-      placeholder.style.display = 'none';
-      // Save to localStorage
-      try {
-        localStorage.setItem('portfolio_ss_' + apId + '_' + index, e.target.result);
-      } catch(err) {
-        console.warn('localStorage plein ou indisponible:', err);
-      }
-      // Re-render to show delete button
-      showApDetail(apId);
-    };
-    reader.readAsDataURL(file);
-  }
-
-  function removeScreenshot(apId, index) {
-    localStorage.removeItem('portfolio_ss_' + apId + '_' + index);
-    showApDetail(apId);
   }
 
   /* ── NAVIGATION ── */
