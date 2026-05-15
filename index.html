@@ -224,10 +224,10 @@
         de l'infrastructure informatique, le support aux utilisateurs et le déploiement de postes.
       </p>
       <ul class="missions-list">
-        <li>Administration du parc informatique et inventaire</li>
-        <li>Support utilisateurs N1/N2</li>
-        <li>Déploiement et configuration de postes</li>
-        <li>Participation à des projets d'infrastructure réseau</li>
+        <li>Préparation et masterisation de nouveaux PC</li>
+        <li>Gestion de tickets support (logiciels, messagerie, matériel)</li>
+        <li>Gestion des droits et des accès</li>
+        <li>Mise à jour des systèmes et correctifs de sécurité</li>
       </ul>
       <div class="journal-placeholder">
         <div class="jp-icon">📔</div>
@@ -596,23 +596,25 @@
       </div>
     `).join('');
 
-    const screenshotsHTML = ap.screenshots.map((s, i) => {
-      return `
-        <div class="ap-screenshot">
-          ${
-            s.src
-              ? `<img src="${s.src}" alt="${s.label}" class="ap-screenshot-img">`
-              : `
-                <div class="ap-screenshot-placeholder">
-                  <span>📷</span>
-                  <p>Capture à ajouter</p>
-                </div>
-              `
-          }
-          <div class="ap-screenshot-caption">${s.label}</div>
-        </div>
-  `    ;
-    }).join('');
+    
+const screenshotsHTML = ap.screenshots.map((s, i) => {
+  return `
+    <div class="ap-screenshot">
+      ${
+        s.src
+          ? `<img class="ap-screenshot-img" src="${s.src}" alt="${s.label}">`
+          : `
+            <div class="ap-screenshot-placeholder">
+              <span>📷</span>
+              <p>Capture à ajouter</p>
+            </div>
+          `
+      }
+      <div class="ap-screenshot-caption">${s.label}</div>
+    </div>
+  `;
+}).join('');
+
 
 
     const competencesHTML = ap.competences.map(c => `<span class="ap-competence">${c}</span>`).join('');
